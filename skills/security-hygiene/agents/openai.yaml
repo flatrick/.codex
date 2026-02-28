@@ -1,0 +1,4 @@
+interface:
+  display_name: "Security Hygiene"
+  short_description: "Find secrets/dependency risks and suggest safe remediations."
+  default_prompt: "Perform a practical security-hygiene review of these changes: detect secret exposure and dependency/application risks, prioritize by exploitability, and suggest safe, minimal-disruption remediations."

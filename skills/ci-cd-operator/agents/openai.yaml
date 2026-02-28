@@ -1,0 +1,4 @@
+interface:
+  display_name: "CI/CD Operator"
+  short_description: "Diagnose pipeline failures and improve release hygiene."
+  default_prompt: "Triage this CI/CD issue end-to-end: isolate root cause, propose the safest immediate fix, and provide prioritized hardening steps plus a release-readiness verdict."
