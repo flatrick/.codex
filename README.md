@@ -18,6 +18,8 @@ Use this deterministic, three-layer model on every machine:
 2. `profiles/<name>.toml` (committed profile overlay)
 3. `config.local.toml` (ignored machine-local overrides)
 
+`config.toml` is a generated local artifact created from those layers and is not tracked.
+
 ### Profile selection
 
 - Select a profile with `CODEX_PROFILE` (defaults to `safe`):
@@ -33,6 +35,12 @@ CODEX_PROFILE="${CODEX_PROFILE:-safe}" python bootstrap.py
 
 `bootstrap.py` applies the layering order (`config.template.toml` → `profiles/<name>.toml` → `config.local.toml`) and writes a deterministic `config.toml`.
 
+The baseline template also hardens shell execution by default:
+- `shell_environment_policy.inherit = "none"`
+- minimal fixed env in `shell_environment_policy.set` (`PATH`, `LANG`, `LC_ALL`, `TERM`, `HOME=/tmp`)
+
+This intentionally avoids user dotfiles/global tool config. If a machine needs those, override this in `config.local.toml`.
+
 > Local-copy fallback (no env var): copy one profile directly before editing local overrides:
 > `cp profiles/safe.toml config.local.toml`
 
@@ -42,6 +50,7 @@ The `.gitignore` blocks local state, logs, and secrets:
 
 - `auth.json` (contains auth/access/refresh tokens)
 - `config.local.toml` (machine-specific config overrides)
+- `config.toml` (generated effective config for the current machine/profile)
 - `sessions/` (conversation history)
 - `shell_snapshots/` (environment snapshots)
 - `skills/.system/` (built-in system skills, ignored by default)

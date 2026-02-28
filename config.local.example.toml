@@ -17,3 +17,9 @@
 
 # Optional: machine-specific tool behavior.
 # approval_policy = "never"
+
+# Optional: relax shell environment hardening for this machine if needed.
+# [shell_environment_policy]
+# inherit = "core"
+# [shell_environment_policy.set]
+# HOME = "/home/your-user"

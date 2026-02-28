@@ -15,3 +15,15 @@ model = "gpt-5.3-codex"
 # Reasoning depth/speed trade-off.
 # Typical values: "low", "medium", "high", "xhigh".
 model_reasoning_effort = "xhigh"
+
+# Keep agent shell sessions deterministic and independent from user dotfiles.
+[shell_environment_policy]
+inherit = "none"
+
+# Minimal environment passed to agent shell commands.
+[shell_environment_policy.set]
+HOME = "/tmp"
+LANG = "C.UTF-8"
+LC_ALL = "C.UTF-8"
+PATH = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+TERM = "dumb"

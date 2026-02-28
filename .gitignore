@@ -1,6 +1,7 @@
 # Auth tokens and identity data (sensitive, machine/user-specific)
 /auth.json
 /config.local.toml
+/config.toml
 
 # Conversation and run logs (can contain prompts, outputs, and paths)
 /sessions/
@@ -32,3 +33,7 @@
 .DS_Store
 *.swp
 *.swo
+
+# Python bytecode/cache artifacts
+__pycache__/
+*.py[cod]

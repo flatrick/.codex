@@ -8,12 +8,12 @@ When instructions conflict, follow this order:
 4. **Repository instructions** (`AGENTS.md`, `SKILL.md`, local docs)
 
 ## Scope
-These rules apply to all work performed in this repository (`/workspace/.codex`) unless a higher-precedence instruction overrides them.
+These rules apply to all work performed in this repository (commonly `~/.codex`) unless a higher-precedence instruction overrides them.
 
 ## Maintenance
 - **Version:** 2.0
 - **Last updated:** 2026-02-28
-- **Owner:** Repository maintainers (`/workspace/.codex`)
+- **Owner:** Repository maintainers (`~/.codex`)
 
 ## Safety (mandatory)
 - Never run destructive filesystem commands on project or critical files without explicit user confirmation.
