@@ -1,0 +1,19 @@
+# Machine-local override template.
+#
+# Copy to config.local.toml (which is gitignored) and edit for the current
+# workstation, IDE, or runtime constraints.
+#
+# Layering order:
+#   config.template.toml -> profiles/<name>.toml -> config.local.toml
+
+# Optional: pin a local model choice for this machine.
+# model = "gpt-5.3-codex"
+
+# Optional: tune reasoning effort independently of the shared profile.
+# model_reasoning_effort = "high"
+
+# Optional: tighten or relax shell/file access on this machine.
+# sandbox_mode = "workspace-write"
+
+# Optional: machine-specific tool behavior.
+# approval_policy = "never"

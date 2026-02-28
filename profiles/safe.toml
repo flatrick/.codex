@@ -1,0 +1,5 @@
+# Conservative profile for shared or higher-risk environments.
+# Focus: safety and determinism.
+
+sandbox_mode = "workspace-write"
+model_reasoning_effort = "high"

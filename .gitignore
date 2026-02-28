@@ -1,5 +1,6 @@
 # Auth tokens and identity data (sensitive, machine/user-specific)
 /auth.json
+/config.local.toml
 
 # Conversation and run logs (can contain prompts, outputs, and paths)
 /sessions/
