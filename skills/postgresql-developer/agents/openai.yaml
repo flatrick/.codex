@@ -1,0 +1,4 @@
+interface:
+  display_name: "PostgreSQL Developer"
+  short_description: "Design and optimize PostgreSQL databases."
+  default_prompt: "Develop and optimize PostgreSQL scripts and schema changes."

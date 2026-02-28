@@ -1,0 +1,4 @@
+interface:
+  display_name: "Python Developer"
+  short_description: "Build, debug, and test Python codebases."
+  default_prompt: "Implement Python changes with tests, typing, and clear verification output."

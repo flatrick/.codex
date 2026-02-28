@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bash Developer"
+  short_description: "Automate tasks and manage systems with Bash scripting."
+  default_prompt: "Develop and optimize Bash scripts and automation workflows."

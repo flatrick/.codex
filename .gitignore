@@ -1,0 +1,33 @@
+# Auth tokens and identity data (sensitive, machine/user-specific)
+/auth.json
+
+# Conversation and run logs (can contain prompts, outputs, and paths)
+/sessions/
+
+# Captured shell environments (may include exported secrets/tokens)
+/shell_snapshots/
+
+# Ephemeral temp workspace data
+/tmp/
+
+# Local runtime database and journal files (volatile state, not portable)
+/state_*.sqlite
+/state_*.sqlite-*
+
+# Model metadata cache fetched by the client (re-generated locally)
+/models_cache.json
+
+# Downloaded/vendor-managed artifacts and nested VCS metadata
+/vendor_imports/
+
+# One-time local migration marker (not useful to share)
+/.personality_migration
+
+# Built-in system skills shipped/managed by Codex (track user skills only)
+/skills/.system/
+# Remove the line above if you explicitly want to version built-in system skills.
+
+# Common editor/OS noise files
+.DS_Store
+*.swp
+*.swo

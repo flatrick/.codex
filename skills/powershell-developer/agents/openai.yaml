@@ -1,0 +1,4 @@
+interface:
+  display_name: "PowerShell Developer"
+  short_description: "Automate tasks and manage infrastructure with PowerShell v7+."
+  default_prompt: "Develop and optimize PowerShell scripts and modules."

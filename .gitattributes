@@ -1,0 +1,28 @@
+# Auto-detect text files and normalize line endings to LF
+* text=auto eol=lf
+
+# Markdown files: LF endings, markdown-aware diffs
+*.md text eol=lf diff=markdown
+*.mdc text eol=lf diff=markdown
+
+# Programming Languages
+*.py text eol=lf diff=python
+*.js text eol=lf
+*.sh text eol=lf
+
+# Config and Markup
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.svg text eol=lf
+
+# Assets and Binaries
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.webp binary
+
+# Lock files
+*.lock text eol=lf -diff

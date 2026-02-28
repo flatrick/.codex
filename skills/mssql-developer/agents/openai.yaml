@@ -1,0 +1,4 @@
+interface:
+  display_name: "MS SQL Developer"
+  short_description: "Design and optimize MS SQL Server databases (T-SQL)."
+  default_prompt: "Develop and optimize T-SQL scripts and schema changes."

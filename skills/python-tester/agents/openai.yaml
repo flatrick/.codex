@@ -1,0 +1,4 @@
+interface:
+  display_name: "Python Tester"
+  short_description: "Design and run reliable tests for Python projects."
+  default_prompt: "Create, debug, and improve Python tests with deterministic coverage."

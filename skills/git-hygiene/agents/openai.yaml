@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Hygiene"
+  short_description: "Audit and configure git repo settings for encoding, line endings, and diffs."
+  default_prompt: "Audit this repository's git configuration and propose improvements for .gitattributes, .editorconfig, and .gitignore."

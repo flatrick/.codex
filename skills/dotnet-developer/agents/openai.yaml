@@ -1,0 +1,4 @@
+interface:
+  display_name: ".NET Developer"
+  short_description: "Build, debug, and test .NET solutions (C#/VB.NET)."
+  default_prompt: "Implement .NET changes with tests and ensure solution integrity using the dotnet CLI."
