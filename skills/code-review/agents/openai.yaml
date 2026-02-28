@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Review"
+  short_description: "Perform PR-quality static review and risk triage."
+  default_prompt: "Review this change like a strict PR reviewer: identify high-impact risks, rank findings by severity/confidence, and provide a clear merge-readiness decision with required fixes."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend QA"
+  short_description: "Run UI regression checks with screenshot-backed reporting."
+  default_prompt: "Execute a focused front-end QA pass on the changed UI: run smoke/regression checks, capture key screenshots, and return a pass/fail report with repro steps for any defects."
