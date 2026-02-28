@@ -1,0 +1,5 @@
+# Thorough profile for audits, refactors, and careful reviews.
+# Focus: deeper reasoning and stricter execution boundaries.
+
+sandbox_mode = "read-only"
+model_reasoning_effort = "xhigh"

@@ -1,0 +1,4 @@
+# Throughput-oriented profile for quick edits and short feedback loops.
+# Focus: speed and lower token spend.
+
+model_reasoning_effort = "medium"

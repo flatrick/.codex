@@ -1,3 +1,17 @@
+# Canonical baseline for all machines.
+#
+# Layering convention (documented in README.md):
+#   1) Start with this file.
+#   2) Apply one profile from ./profiles/*.toml.
+#   3) Apply optional machine-local overrides from config.local.toml.
+
+# Filesystem sandbox level for command execution.
+# Common values: "read-only", "workspace-write", "danger-full-access".
 sandbox_mode = "workspace-write"
+
+# Default model used by Codex sessions.
 model = "gpt-5.3-codex"
+
+# Reasoning depth/speed trade-off.
+# Typical values: "low", "medium", "high", "xhigh".
 model_reasoning_effort = "xhigh"
