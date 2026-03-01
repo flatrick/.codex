@@ -56,7 +56,7 @@ jobs:
 
       - name: Lint markdown files
         run: |
-          markdownlint-cli2 README.md INSTRUCTIONS.md "skills/*/SKILL.md"
+          markdownlint-cli2 README.md AGENTS.md INSTRUCTIONS.md PLAN.md "skills/*/SKILL.md"
 
       - name: Check markdown links
         uses: lycheeverse/lychee-action@v2
@@ -66,11 +66,11 @@ jobs:
             --no-progress
             --max-retries 2
             --retry-wait-time 2
-            README.md INSTRUCTIONS.md skills/*/SKILL.md
+            README.md AGENTS.md INSTRUCTIONS.md PLAN.md skills/*/SKILL.md
 
       - name: Check required files and ignored sensitive paths
         run: |
-          required_files=(.editorconfig .gitattributes .gitignore)
+          required_files=(.editorconfig .gitattributes .gitignore AGENTS.md PLAN.md skills-manifest.lock.json)
           for file in "${required_files[@]}"; do
             if [[ ! -f "$file" ]]; then
               echo "Missing required file: $file"
@@ -109,3 +109,48 @@ jobs:
               exit 1
             fi
           done
+
+      - name: Verify shared-skill manifest and rust adapters
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          shared = [
+              "bash-developer",
+              "ci-cd-operator",
+              "code-review",
+              "dotnet-developer",
+              "frontend-qa",
+              "git-hygiene",
+              "mssql-developer",
+              "postgresql-developer",
+              "powershell-developer",
+              "python-developer",
+              "python-tester",
+              "security-hygiene",
+              "rust-developer",
+              "rust-tester",
+          ]
+
+          manifest = json.loads(Path("skills-manifest.lock.json").read_text(encoding="utf-8"))
+          expected = {item["name"]: item["sha256"] for item in manifest["skills"]}
+
+          if sorted(expected) != sorted(shared):
+              raise SystemExit("Manifest shared skill set does not match required list.")
+
+          for name in shared:
+              skill_path = Path("skills") / name / "SKILL.md"
+              adapter_path = Path("skills") / name / "agents" / "openai.yaml"
+              if not skill_path.exists():
+                  raise SystemExit(f"Missing skill file: {skill_path}")
+              if not adapter_path.exists():
+                  raise SystemExit(f"Missing adapter file: {adapter_path}")
+
+              digest = hashlib.sha256(skill_path.read_bytes()).hexdigest()
+              if expected[name] != digest:
+                  raise SystemExit(f"Manifest hash mismatch for {name}")
+
+          print("OK: shared skills, adapters, and manifest hashes verified.")
+          PY

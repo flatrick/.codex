@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rust Tester"
+  short_description: "Design and maintain reliable Rust test suites."
+  default_prompt: "Add and improve Rust tests, reproduce failures, and verify fixes with deterministic results."

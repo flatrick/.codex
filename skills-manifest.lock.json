@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "canonical_source": "/home/flatrick/.cursor/skills",
+  "skills": [
+    {
+      "name": "bash-developer",
+      "sha256": "89bfafcfbdce0f739d7b6298364f46f7a03473d01f17357d9c150e1c9e858927"
+    },
+    {
+      "name": "ci-cd-operator",
+      "sha256": "1646c89188d72c8d0341783be8f20f23de2d0d174570bc1503b10f510d6f2428"
+    },
+    {
+      "name": "code-review",
+      "sha256": "58ba837b2d75fd6da442c4ff55aae64d8056c6cec96c8e6fa9c2d36ceaf524a7"
+    },
+    {
+      "name": "dotnet-developer",
+      "sha256": "0b95f590ba38ffbb7c66b3881179c15fd3903e70dc1d50bbe38a4f0862250fc4"
+    },
+    {
+      "name": "frontend-qa",
+      "sha256": "aaef9eaf06184763094d6c8f7f549eb827dab9c3094318f9b2474afa35892da4"
+    },
+    {
+      "name": "git-hygiene",
+      "sha256": "38cfc04a6b3ecd77c791b7ba0672fb08cc67fa09dd6cf453a5362da4767504c9"
+    },
+    {
+      "name": "mssql-developer",
+      "sha256": "2b2550eac319f1a67b84748396f4fb081e2b758a780da58b4f189323a74a1c32"
+    },
+    {
+      "name": "postgresql-developer",
+      "sha256": "d0caadc6c956eabc1aa554e0388b80e54e249550080f8bd522c8bf383086f1d1"
+    },
+    {
+      "name": "powershell-developer",
+      "sha256": "c95184023712fa4a1b50a85274503fe15ae6a766a5b57ae0daa61455f6640625"
+    },
+    {
+      "name": "python-developer",
+      "sha256": "8d2ef992853d36497f3ea9bf6f23a69efebdf365d93734fd611299e9bed026c1"
+    },
+    {
+      "name": "python-tester",
+      "sha256": "360721a0198d1a349fa48da765f93c86eb746c033bdc53d1bdcb003038e04295"
+    },
+    {
+      "name": "security-hygiene",
+      "sha256": "a719c07cf88fae202524967f66e19192aac850b8e980dedb17daf6610bb146d3"
+    },
+    {
+      "name": "rust-developer",
+      "sha256": "d04d99b14a26b8d9a6717cefff4a88ae18f6d45d78fe104b1ae985f63d53af95"
+    },
+    {
+      "name": "rust-tester",
+      "sha256": "a412b4fdf5d1dd96576b45cdf315b2835f07d72a6c0e8face475a9f301db4ab2"
+    }
+  ]
+}

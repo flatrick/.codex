@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rust Developer"
+  short_description: "Build, refactor, and optimize Rust codebases."
+  default_prompt: "Implement Rust changes with tests, clippy checks, and clear verification output."
